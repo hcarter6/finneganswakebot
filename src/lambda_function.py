@@ -37,7 +37,7 @@ def lambda_handler(event, context):
     api = tweepy.API(auth)
 
     print("Get tweet from csv file")
-    tweets_file = ROOT / "tweets.csv"
+    tweets_file = ROOT / "fw_tweets.csv" # change depending on file
     recent_tweets = api.user_timeline()[:3]
     tweet = get_tweet(tweets_file)
 
